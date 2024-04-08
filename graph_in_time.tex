@@ -1,0 +1,50 @@
+\documentclass{standalone}
+\usepackage{pgfplots}
+\usepackage{filecontents}
+
+\begin{filecontents*}{data.csv}
+	index,power
+	1,2.379664
+	2,3.152075
+	3,3.4712445
+	4,3.3597595
+	5,2.7999495
+	6,2.2777275
+	7,1.6064405
+	8,1.515045
+	9,1.940984
+	10,2.348854
+	11,2.41586
+	12,2.5764875
+	13,2.7127825
+	14,2.467543
+	15,2.4536895
+	16,2.200298
+	17,2.013546
+	18,1.8425865
+	19,1.949106
+	20,2.028348
+	21,1.843036
+	22,1.562083
+\end{filecontents*}
+
+\begin{document}
+	
+
+		\centering
+		\begin{tikzpicture}
+			\begin{axis}[
+				xlabel={Index},
+				ylabel={Power},
+				width=0.8\textwidth, % Adjust the width of the graph
+				height=8cm, % Adjust the height of the graph
+				grid=major, % Add grid lines
+				]
+				\addplot table [x=index, y=power, col sep=comma] {data.csv};
+			\end{axis}
+		\end{tikzpicture}
+
+
+	
+\end{document}
+
