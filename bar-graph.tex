@@ -1,0 +1,38 @@
+\documentclass{standalone}
+\usepackage{pgfplots}
+
+\begin{document}
+	
+	\begin{tikzpicture}
+		\begin{axis}[
+			ybar,
+			bar width=0.4cm, % Adjust the width of the bars
+			ymin=0,
+			xlabel={WTGs},
+			ylabel={Avg. kW},
+			xtick=data,
+			xticklabels={Total, 13, 14, 15, 16, 17, 
+			18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29},
+			legend style={at={(0.5,-0.15)},
+			anchor=north,legend columns=-1},
+			width=\textwidth, % Adjust the width of the graph to fit
+			height=8cm, % Adjust the height of the graph
+       		enlarge x limits={0.02}, % Adjust the space between bars			
+			]
+				\addplot coordinates {(1,10) (2,20) (3,15) (4,25)
+			(5,10) (6,10) (7,10) (8,10) (9,10) (10,10) (11,10)
+		     (12,10)  (13,10) (14,10) (15,10) (16,10) (17,10) (18,10)   };
+			%\addplot coordinates {(1,15) (2,25) (3,20) (4,30)};
+			%\legend{Group 1, Group 2}
+		\end{axis}
+	\end{tikzpicture}
+	
+\end{document}
+
+m_april_40.gen_buses_list()
+Traceback (most recent call last):
+File "<string>", line 1, in <module>
+TypeError: 'list' object is not callable
+m_april_40.gen_buses_list
+['BG02', 'BG03', 'BG05', 'BG06', 'BG07', 'BG08', 'BG09', 'BG11', 'BG12', 'BG13', 'BG15', 'BG16', 'BG18', 'BG20', 'BG21', 'BG22', 'BG23']
+
